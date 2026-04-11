@@ -9,7 +9,7 @@ export const heroContent = {
   name: "Ganesh Shinde",
   title: "AI Product Engineer & Full-Stack Developer",
   subtitle:
-    "and I build end‑to‑end LLM products — from health analysis on Vertex/Gemini to B2B workflows and CI/CD automation.",
+    "I build end‑to‑end LLM products — from health analysis on Vertex/Gemini to B2B workflows and CI/CD automation.",
   location: "Bengaluru, India · Open to remote founding/early AI roles",
   topTagline: "Scaling AI Systems with Intent",
 };
@@ -81,7 +81,7 @@ export const projects = [
   {
     id: 1,
     title: "HealthAI – AI-powered health report pipeline",
-    des: "End-to-end health analysis platform using Vertex AI (Gemini) that ingests lab PDFs/CSVs and health assessments, runs multi-step analysis, and outputs structured JSON plus human-readable reports. Reduced manual report creation from 2–5 days to under a minute at Bewell.",
+    des: "End-to-end health analysis platform using Vertex AI (Gemini) that ingests lab PDFs/CSVs and health assessments, runs multi-step analysis, and outputs structured JSON plus human-readable reports. Reduced manual report creation from 2–5 days to under a minute.",
     img: "/p1.png",
     iconLists: ["/python.svg", "/gemini.svg", "/vertexai.svg"],
     link: "https://healthai-by-ganesh-shinde.streamlit.app/",
@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 2,
     title: "Stratifai – 60-second AI marketing strategist",
-    des: "SaaS app that takes a product URL or description, scrapes and understands it, then runs a 3-step LLM pipeline (product understanding → strategy → content) to generate ICP, messaging angles, ad copy, 3-email sequence, and landing page structure with export options.",
+    des: "SaaS app that takes a product URL/description, scrapes and understands it, then runs a 3-step LLM pipeline (understanding → strategy → content) to generate ICP, messaging angles, ad copy, a 3-email sequence, and landing page structure with export options. Used by early-stage founders as a faster way to go from idea to launch-ready campaigns.",
     img: "/p2.png",
     iconLists: [
       "/python.svg",
@@ -103,7 +103,7 @@ export const projects = [
   {
     id: 3,
     title: "Napkin – B2B ordering & communication platform",
-    des: "B2B platform for suppliers and buyers (e.g., alcohol brands and retail shops) to manage orders and communication in one place. Supports in-app ordering flows plus a unique email-to-chat bridge where each seller gets a dedicated email and all email orders/messages are surfaced as chat threads in the product.",
+    des: "B2B platform for suppliers and buyers (e.g., alcohol brands and retail shops) to manage orders and communication in one place. Supports in-app ordering plus an email-to-chat bridge where each seller gets a dedicated email, and all email orders/messages are surfaced as chat threads inside the product.",
     img: "/p3.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
     link: "https://napkin-b2b-app.vercel.app/",
@@ -195,7 +195,7 @@ export const workExperience = [
     title: "Software Engineer (Frontend & CI/CD Systems)",
     company: "Black Duck",
     period: "Nov 2025 – Present · Bengaluru · Hybrid",
-    desc: "Building features for an integration platform that connects SCMs (GitHub, GitLab, Bitbucket, Azure) with automated security scanning workflows. Own GitLab integration end-to-end, including UI, workflow logic, and dynamic OS-aware CI/CD YAML generation across different runners.",
+    desc: "Building features for an integration platform that connects SCMs (GitHub, GitLab, Bitbucket, Azure) with automated security scanning workflows. Own GitLab integration end-to-end, including UI, workflow logic, and dynamic OS-aware CI/CD YAML generation across different runners and regularly debug production issues in a 9+ product environment.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
