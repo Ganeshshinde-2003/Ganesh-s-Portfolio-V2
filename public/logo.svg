@@ -1,0 +1,19 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer rounded square -->
+  <rect x="2" y="2" width="40" height="40" rx="12" fill="#020617" stroke="#0F172A" stroke-width="1.2" />
+
+  <!-- Inner "chip" -->
+  <rect x="10" y="10" width="24" height="24" rx="6" fill="#020617" stroke="#22C55E" stroke-width="1.4" />
+
+  <!-- Small pins -->
+  <circle cx="14" cy="8" r="1" fill="#22C55E" />
+  <circle cx="30" cy="8" r="1" fill="#22C55E" />
+  <circle cx="14" cy="36" r="1" fill="#22C55E" />
+  <circle cx="30" cy="36" r="1" fill="#22C55E" />
+
+  <!-- GS text -->
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="15" font-weight="600" fill="#E5E7EB">
+    GS
+  </text>
+</svg>

@@ -5,11 +5,19 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+export const heroContent = {
+  name: "Ganesh Shinde",
+  title: "AI Product Engineer & Full-Stack Developer",
+  subtitle:
+    "and I build end‑to‑end LLM products — from health analysis on Vertex/Gemini to B2B workflows and CI/CD automation.",
+  location: "Bengaluru, India · Open to remote founding/early AI roles",
+  topTagline: "Scaling AI Systems with Intent",
+};
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
+    title: "0→1 AI health systems",
+    description: "AI health platform turning lab data into structured reports.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -18,8 +26,9 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
+    title: "AI marketing strategist (Stratifai)",
+    description:
+      "SaaS that turns a product URL/description into full marketing strategy.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -28,8 +37,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "B2B workflows & unified comms",
+    description: "Platform unifying B2B orders and buyer–seller communication.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -38,19 +47,18 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
+    title: "SCM & CI/CD automation",
+    description: "SCM integrations and dynamic CI/CD for security scans.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "Front‑end craft with purpose",
+    description: "Clean React/Next.js UIs for complex AI workflows.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -59,8 +67,8 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
+    title: "Ownership, speed & systems thinking",
+    description: "Fast ramp, deep ownership across stack and systems.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -72,99 +80,104 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "HealthAI – AI-powered health report pipeline",
+    des: "End-to-end health analysis platform using Vertex AI (Gemini) that ingests lab PDFs/CSVs and health assessments, runs multi-step analysis, and outputs structured JSON plus human-readable reports. Reduced manual report creation from 2–5 days to under a minute at Bewell.",
+    img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    link: "https://healthai-by-ganesh-shinde.streamlit.app/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
+    title: "Stratifai – 60-second AI marketing strategist",
+    des: "SaaS app that takes a product URL or description, scrapes and understands it, then runs a 3-step LLM pipeline (product understanding → strategy → content) to generate ICP, messaging angles, ad copy, 3-email sequence, and landing page structure with export options.",
+    img: "/p2.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    link: "https://stratifai-3znf.vercel.app/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
+    title: "Napkin – B2B ordering & communication platform",
+    des: "B2B platform for suppliers and buyers (e.g., alcohol brands and retail shops) to manage orders and communication in one place. Supports in-app ordering flows plus a unique email-to-chat bridge where each seller gets a dedicated email and all email orders/messages are surfaced as chat threads in the product.",
+    img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    link: "https://napkin-b2b-app.vercel.app/",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    title: "Cloudinary Image Editor – 'Photo Shop'",
+    des: "Full-stack image management and editing app. Users upload images from multiple sources (device, web, Google Drive, Dropbox, stock providers), store them on Cloudinary, organize into albums, like/favorite, and apply edits like blur, grayscale, pixelate, background removal, and generative fill.",
+    img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "https://cloudinary-image-editor.vercel.app/",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Ganesh was a pleasure. His quick understanding and agile execution ensured smooth project delivery and high-quality results.",
+    name: "Chaitanya Pandit",
+    title: "Founder's Office at Jericho Ventures",
+    img: "/chaitanya.png",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Impressed by Ganesh's dedication and strong determination to deliver quality work, which ensured the project met all expectations.",
+    name: "Yash Rajan Shukla",
+    title: "CTO at ParaTalks",
+    img: "/yash.jpeg",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Ganesh effectively delivered the website on time, meeting our regulatory needs and setting the stage for future expansion.",
+    name: "Sayantan Datta",
+    title: "Co-founder at Bsides Kolkata",
+    img: "/sayantan.png",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Throughout his internship, Ganesh's proficiency in web development shone brightly, delivering high-quality code with precision and creativity.",
+    name: "Samiksha Taru",
+    title: "Founder at Haraay Design Studio",
+    img: "/samiksha.jpeg",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Ganesh demonstrated exceptional teamwork and adaptability, making valuable contributions to our projects throughout his internship.",
+    name: "Pathik Patel",
+    title: "Senior Software Developer at GT Pvt. Ltd",
+    img: "/pathi.jpg",
   },
 ];
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
+    name: "Jericho Ventures",
     img: "/cloud.svg",
     nameImg: "/cloudName.svg",
   },
   {
     id: 2,
-    name: "appwrite",
+    name: "ParaTalks",
     img: "/app.svg",
     nameImg: "/appName.svg",
   },
   {
     id: 3,
-    name: "HOSTINGER",
+    name: "Bsides Kolkata",
     img: "/host.svg",
     nameImg: "/hostName.svg",
   },
   {
     id: 4,
-    name: "stream",
+    name: "Haraay Design Studio",
     img: "/s.svg",
     nameImg: "/streamName.svg",
   },
   {
     id: 5,
-    name: "docker.",
+    name: "GT Pvt. Ltd",
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
@@ -173,45 +186,57 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Software Engineer (Frontend & CI/CD Systems)",
+    company: "Black Duck",
+    period: "Nov 2025 – Present · Bengaluru · Hybrid",
+    desc: "Building features for an integration platform that connects SCMs (GitHub, GitLab, Bitbucket, Azure) with automated security scanning workflows. Own GitLab integration end-to-end, including UI, workflow logic, and dynamic OS-aware CI/CD YAML generation across different runners.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Founding AI & Full-Stack Engineer",
+    company: "Bewell",
+    period: "May 2025 – Oct 2025 · Remote (SF-based startup)",
+    desc: "Built and scaled an AI-powered health analysis platform from 0→1, designing LLM systems on Gemini/Vertex AI to convert unstructured health data into structured insights and automated reports.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "AI & Frontend Engineer",
+    company: "Bewell",
+    period: "Nov 2024 – Apr 2025 · Remote",
+    desc: "Built the Bewell mobile app from scratch and launched beta on Play Store and App Store, integrating AI-powered health insights and React-based admin tools.",
+    className: "md:col-span-1",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
+    title: "Full-Stack / Frontend Internships",
+    company: "Haraay Studio, ParaTalks, OSCode, LoGrow",
+    period: "2023 – 2024 · Remote",
+    desc: "Delivered production features across web and mobile using React, Next.js, Flutter, Node.js, and Firebase for multiple clients and startups.",
+    className: "md:col-span-1",
     thumbnail: "/exp4.svg",
   },
 ];
+
+export const socials = {
+  github: "https://github.com/Ganeshshinde-2003",
+  linkedin: "https://www.linkedin.com/in/dev-ganesh-shinde/",
+  twitter: "",
+};
 
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: socials.github,
   },
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
     img: "/link.svg",
+    link: socials.linkedin,
   },
 ];
