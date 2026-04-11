@@ -83,7 +83,7 @@ export const projects = [
     title: "HealthAI – AI-powered health report pipeline",
     des: "End-to-end health analysis platform using Vertex AI (Gemini) that ingests lab PDFs/CSVs and health assessments, runs multi-step analysis, and outputs structured JSON plus human-readable reports. Reduced manual report creation from 2–5 days to under a minute at Bewell.",
     img: "/p1.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/python.svg", "/gemini.svg", "/vertexai.svg"],
     link: "https://healthai-by-ganesh-shinde.streamlit.app/",
   },
   {
@@ -91,7 +91,13 @@ export const projects = [
     title: "Stratifai – 60-second AI marketing strategist",
     des: "SaaS app that takes a product URL or description, scrapes and understands it, then runs a 3-step LLM pipeline (product understanding → strategy → content) to generate ICP, messaging angles, ad copy, 3-email sequence, and landing page structure with export options.",
     img: "/p2.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: [
+      "/python.svg",
+      "/gemini.svg",
+      "/vertexai.svg",
+      "/next.svg",
+      "/ts.svg",
+    ],
     link: "https://stratifai-3znf.vercel.app/",
   },
   {
@@ -99,7 +105,7 @@ export const projects = [
     title: "Napkin – B2B ordering & communication platform",
     des: "B2B platform for suppliers and buyers (e.g., alcohol brands and retail shops) to manage orders and communication in one place. Supports in-app ordering flows plus a unique email-to-chat bridge where each seller gets a dedicated email and all email orders/messages are surfaced as chat threads in the product.",
     img: "/p3.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
     link: "https://napkin-b2b-app.vercel.app/",
   },
   {
@@ -107,7 +113,7 @@ export const projects = [
     title: "Cloudinary Image Editor – 'Photo Shop'",
     des: "Full-stack image management and editing app. Users upload images from multiple sources (device, web, Google Drive, Dropbox, stock providers), store them on Cloudinary, organize into albums, like/favorite, and apply edits like blur, grayscale, pixelate, background removal, and generative fill.",
     img: "/p4.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/cloudinary.svg"],
     link: "https://cloudinary-image-editor.vercel.app/",
   },
 ];
