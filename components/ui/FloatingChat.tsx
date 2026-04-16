@@ -6,9 +6,16 @@ import { MessageCircle, X, Send, Loader } from "lucide-react";
 const INITIAL_MESSAGES = [
   {
     id: 1,
-    text: "Hey! I'm Ganesh's AI. Ask me anything about Ganesh's work, projects, skills, or portfolio!",
+    text: "Hey! I'm Ganesh. Ask me anything about my work, projects, skills, or portfolio!",
     sender: "bot" as const,
   },
+];
+
+const SUGGESTED_MESSAGES = [
+  "What projects have you built?",
+  "Tell me about your experience",
+  "What are your skills?",
+  "What are you looking for?",
 ];
 
 // Function to render links and emails as hyperlinks
@@ -329,6 +336,57 @@ export const FloatingChat = () => {
                 )}
                 <div ref={messagesEndRef} />
               </div>
+
+              {/* Suggested Messages */}
+              {messages.length === 1 && (
+                <div className="px-3 py-2 border-t border-white/10 space-y-2">
+                  <div className="grid grid-cols-2 gap-2">
+                    {SUGGESTED_MESSAGES.map((msg, idx) => (
+                      <button
+                        key={idx}
+                        onClick={async () => {
+                          const userMsg = {
+                            id: messages.length + 1,
+                            text: msg,
+                            sender: "user" as const,
+                          };
+                          setMessages((prev) => [...prev, userMsg]);
+                          setIsLoading(true);
+
+                          try {
+                            const response = await fetch("/api/chat", {
+                              method: "POST",
+                              headers: {
+                                "Content-Type": "application/json",
+                              },
+                              body: JSON.stringify({ message: msg }),
+                            });
+
+                            if (!response.ok) throw new Error("Failed");
+
+                            const data = await response.json();
+                            setMessages((prev) => [
+                              ...prev,
+                              {
+                                id: prev.length + 1,
+                                text: data.reply,
+                                sender: "bot",
+                              },
+                            ]);
+                          } catch (error) {
+                            console.error("Chat error:", error);
+                          } finally {
+                            setIsLoading(false);
+                          }
+                        }}
+                        className="text-xs bg-purple-600/20 hover:bg-purple-600/40 text-purple-300 border border-purple-500/30 rounded-lg px-2 py-1.5 transition-colors"
+                      >
+                        {msg}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Input */}
               <div className="p-3 border-t border-white/10 flex gap-2 bg-gradient-to-t from-black/20 to-transparent">
