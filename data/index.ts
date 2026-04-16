@@ -211,7 +211,7 @@ export const workExperience = [
   {
     id: 3,
     title: "AI & Frontend Engineer",
-    company: "Bewell",
+    company: "Bewell - Internship",
     period: "Nov 2024 – Apr 2025 · Remote",
     desc: "Built the Bewell mobile app from scratch and launched beta on Play Store and App Store, integrating AI-powered health insights and React-based admin tools.",
     className: "md:col-span-1",
@@ -220,7 +220,7 @@ export const workExperience = [
   {
     id: 4,
     title: "Full-Stack / Frontend Internships",
-    company: "Haraay Studio, ParaTalks, OSCode, LoGrow",
+    company: "Haraay Studio, ParaTalks, OSCode, LoGrow - Internship",
     period: "2023 – 2024 · Remote",
     desc: "Delivered production features across web and mobile using React, Next.js, Flutter, Node.js, and Firebase for multiple clients and startups.",
     className: "md:col-span-1",
