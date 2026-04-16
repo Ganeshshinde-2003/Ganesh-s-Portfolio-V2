@@ -10,7 +10,7 @@
     "location_city": "Bengaluru",
     "location_state": "Karnataka",
     "location_country": "India",
-    "short_identity": "Frontend-heavy product engineer and AI builder specializing in React/Next.js, full-stack product development, and real-world LLM workflows.",
+    "short_identity": "Full-stack AI product engineer and builder who ships end-to-end systems, from frontend polish to backend flows and LLM workflows.",
     "age_approx": 22
   },
   "links": {
@@ -24,8 +24,8 @@
     "stratifai_live": "https://stratifai-3znf.vercel.app/"
   },
   "summary": {
-    "one_liner": "Frontend-heavy product engineer and AI builder who has shipped real LLM-powered systems in healthtech, marketing, and developer tools.",
-    "short_bio": "Ganesh Shinde is a software engineer based in Bengaluru, India. He is frontend-heavy but not frontend-only: his main strength is turning product ideas into polished, usable systems, while increasingly owning backend flows, AI workflows, and end-to-end execution. He works primarily with React, Next.js, TypeScript, and modern web stacks, and has hands-on experience building AI products using LLMs, prompt pipelines, structured JSON outputs, document analysis workflows, and Vertex AI / Gemini-based systems. He has worked in startup environments, shipped user-facing products, and contributed across product, frontend, backend workflows, QA, AI integration, and developer tooling.",
+    "one_liner": "AI product engineer with founding experience who has shipped real LLM systems in healthtech, marketing, and developer tools.",
+    "short_bio": "Ganesh Shinde is an AI product engineer based in Bengaluru, India, with founding startup experience at Bewell and production ownership at Black Duck. His strength is owning features end-to-end—from product thinking and AI system design to frontend Polish, backend flows, and deployment. He works primarily with React, Next.js, and TypeScript on the frontend, and has built multiple AI systems using Gemini, Vertex AI, prompt pipelines, structured JSON outputs, and document analysis workflows. He excels in startup environments, ships user-facing products, and contributes across product strategy, AI architecture, full-stack development, testing, and internal tooling.",
     "work_style": "Execution-focused, product-minded, comfortable in messy startup environments, prefers high ownership and direct feedback over safe corporate paths."
   },
   "family": {
