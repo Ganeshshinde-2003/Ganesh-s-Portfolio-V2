@@ -199,22 +199,23 @@
         "Python",
         "Streamlit",
         "Google Vertex AI",
-        "Gemini 2.5",
+        "Gemini 2.5 Flash Lite",
         "PyMuPDF",
         "python-docx",
         "pandas",
         "openpyxl",
-        "jsonschema"
+        "jsonschema",
+        "Google Cloud Platform"
       ],
       "key_capabilities": [
         "Multi-format file upload (PDF, DOCX, Excel, CSV, TXT).",
-        "Biomarker analysis with clinical vs optimal ranges.",
+        "Biomarker analysis with clinical vs optimal ranges (50+ biomarkers).",
         "Four pillars scoring (Eat, Sleep, Move, Recover).",
-        "Monthly health reports with trend analysis and radar charts.",
-        "Supplement recommendations and root-cause analysis.",
-        "Interactive JSON outputs and prompt-testing interfaces."
+        "Monthly health reports with trend analysis and radar-style visualizations.",
+        "Supplement recommendations and root-cause style health pattern analysis.",
+        "Interactive JSON outputs and prompt-testing interfaces for rapid iteration."
       ],
-      "why_it_matters": "Shows ability to build a vertical AI product, handle unstructured data, design prompt workflows, generate structured JSON, and ship a real deployed system.",
+      "why_it_matters": "Shows ability to build a vertical AI product, handle unstructured health data, design multi-step prompt workflows, generate structured JSON, and ship a real deployed system.",
       "status": "Deployed",
       "links": {
         "github": "https://github.com/Ganeshshinde-2003/HealthAI-2.0.0-By-Ganesh-Shinde",
@@ -224,25 +225,206 @@
     {
       "name": "Stratifai",
       "role": "Creator",
-      "description": "Production-quality AI SaaS platform that generates complete marketing strategies in ~60 seconds from a product URL or description.",
+      "description": "AI SaaS platform that turns a product URL or description into a complete marketing strategy and content package in under 60 seconds.",
       "tech_stack": [
-        "Next.js",
+        "Next.js 14",
+        "React",
         "TypeScript",
+        "CSS Modules",
+        "Axios",
         "FastAPI",
         "Python",
-        "Google Vertex AI (Gemini)",
+        "Pydantic",
+        "Google Vertex AI",
+        "Gemini models",
         "BeautifulSoup4",
         "ReportLab"
       ],
       "key_capabilities": [
-        "Scrapes or ingests a product URL or description.",
-        "Multi-step AI pipeline: product understanding → marketing strategy → content generation.",
-        "Generates ICP, positioning, pain points, messaging angles.",
-        "Outputs ad copy, email sequences, landing page structure, CTAs.",
-        "Exports to PDF, JSON, Markdown, CSV, and social content templates."
+        "Dual input: URL scraping of product websites and raw text descriptions.",
+        "Three-step AI pipeline (product understanding, marketing strategy, content generation).",
+        "Generates ad copy, email sequences, landing page structure, CTAs and more.",
+        "Clean, section-based UI with light/dark mode and minimal, professional design.",
+        "One-click export to PDF, JSON, Markdown, CSV, social templates and 30‑day .ics content calendar.",
+        "No-auth, no-database architecture for fast deployment and simple scaling."
       ],
-      "why_it_matters": "Demonstrates multi-step LLM workflows, strong product sense, real founder users, and case-study level validation.",
-      "status": "Deployed, used by founders",
+      "why_it_matters": "Shows applied AI product thinking for go-to-market workflows, combining scraping, structured prompting, exports, and a production-style SaaS UX.",
+      "status": "In Development",
+      "links": {
+        "github": null,
+        "live": null
+      }
+    },
+    {
+      "name": "Cloudinary Image Editor (Photo Shop Project)",
+      "role": "Creator",
+      "description": "Image gallery and editor that supports multi-source uploads, Cloudinary-backed storage, albums, favorites, and Photoshop-style transformations.",
+      "tech_stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Cloudinary"
+      ],
+      "key_capabilities": [
+        "Upload images from device, URLs and multiple external sources (e.g. Google Drive, Dropbox, stock providers).",
+        "Secure storage and delivery of images via Cloudinary.",
+        "Album creation, likes and favorites for organizing and curating media.",
+        "Image editing tools: blur, grayscale, pixelate, background removal.",
+        "Generative fill support with or without user prompts.",
+        "Responsive gallery UI with smooth viewing and management experience."
+      ],
+      "why_it_matters": "Demonstrates ability to build production-like media workflows with third‑party APIs, complex stateful UX, and non-trivial image transformations beyond simple CRUD.",
+      "status": "Deployed",
+      "links": {
+        "github": "https://github.com/Ganeshshinde-2003/Cloudinary-Image-Editor",
+        "live": null
+      }
+    },
+    {
+      "name": "Flutter WhatsApp Clone",
+      "role": "Creator",
+      "description": "Cross-platform WhatsApp-style messaging application built with Flutter and Firebase, supporting real-time chats, media sharing and groups.",
+      "tech_stack": [
+        "Flutter",
+        "Dart",
+        "Firebase Authentication",
+        "Firebase Cloud Firestore",
+        "Firebase Cloud Storage",
+        "Riverpod",
+        "flutter_riverpod",
+        "image_picker",
+        "flutter_contacts",
+        "cached_network_image",
+        "cached_video_player",
+        "emoji picker",
+        "Giphy integration",
+        "audio/voice libraries"
+      ],
+      "key_capabilities": [
+        "Phone-number based registration with OTP verification.",
+        "Real-time one-to-one and group messaging.",
+        "Media sharing: images, videos, GIFs and audio messages.",
+        "Message replies, status/stories and rich emoji/GIF support.",
+        "Contacts integration to start chats from the user’s address book.",
+        "Cross-platform support for Android, iOS, web and desktop targets."
+      ],
+      "why_it_matters": "Shows ability to build and ship a complex, real-time, cross‑platform product with authentication, media handling and scalable backend integration.",
+      "status": "Deployed",
+      "links": {
+        "github": "https://github.com/Ganeshshinde-2003/FlutterWhatsAppClone",
+        "live": null
+      }
+    },
+    {
+      "name": "NextJS Threads Clone",
+      "role": "Creator",
+      "description": "Web application inspired by Meta Threads that supports threaded discussions, communities, user profiles, search and activity tracking.",
+      "tech_stack": [
+        "Next.js 13",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Clerk (clerknextjs)",
+        "MongoDB",
+        "Mongoose",
+        "UploadThing",
+        "Zod",
+        "Radix UI",
+        "React Hook Form"
+      ],
+      "key_capabilities": [
+        "Threaded discussions with rich media and hyperlinks.",
+        "Community creation, joining and themed conversations.",
+        "User profiles with activity, posts and customization.",
+        "User search and trending/explore views.",
+        "Secure authentication and file uploads.",
+        "Responsive, interactive UI leveraging Next.js 13 app router."
+      ],
+      "why_it_matters": "Demonstrates full-stack social app architecture, including auth, data modeling, file uploads and a modern Next.js 13 implementation.",
+      "status": "Deployed",
+      "links": {
+        "github": "https://github.com/Ganeshshinde-2003/NextJS-Threads",
+        "live": null
+      }
+    },
+    {
+      "name": "Bewell AI Health Platform",
+      "role": "Founding AI & Full Stack Engineer",
+      "description": "AI-powered health platform for Bewell that converts unstructured health data into structured insights and automated PDF reports.",
+      "tech_stack": [
+        "Google Gemini",
+        "Google Vertex AI",
+        "Python",
+        "Flutter",
+        "Dart",
+        "React",
+        "TypeScript"
+      ],
+      "key_capabilities": [
+        "LLM pipelines for converting doctor reports and onboarding data into structured JSON.",
+        "Monthly health insights engine based on user logs and activity.",
+        "Automated PDF report generation from AI outputs.",
+        "HIPAA-aware architecture on Vertex AI for handling sensitive PHI.",
+        "Bewell mobile app (Flutter) and React admin panel built and optimized.",
+        "Mobile app size reduced from ~35 MB to ~14.6 MB (~60% improvement)."
+      ],
+      "why_it_matters": "Real-world startup experience as a founding engineer, owning AI features, product architecture and performance for a healthtech product.",
+      "status": "Production (company internal)",
+      "links": {
+        "github": null,
+        "live": null
+      }
+    },
+    {
+      "name": "Bewell Mobile App & Admin Panel",
+      "role": "AI & Frontend Engineer",
+      "description": "Cross-platform mobile app and React admin panel for Bewell to manage users, data and AI-driven health insights.",
+      "tech_stack": [
+        "Flutter",
+        "Dart",
+        "React",
+        "TypeScript",
+        "Slack integrations",
+        "Backend APIs"
+      ],
+      "key_capabilities": [
+        "Built Bewell mobile app from scratch and launched beta on Play Store and App Store.",
+        "Integrated AI-powered personalized health insights using Gemini.",
+        "Created React-based admin panel for large datasets and operational workflows.",
+        "Improved app performance and reduced bundle size significantly (~35 MB → ~14.6 MB).",
+        "Collaborated closely with product and founders on feature and architecture decisions.",
+        "Explored generative AI use-cases that later became production systems."
+      ],
+      "why_it_matters": "Shows ability to own core product surfaces in a startup, ship mobile + web, and integrate AI features into real user-facing flows.",
+      "status": "Production (company internal)",
+      "links": {
+        "github": null,
+        "live": null
+      }
+    },
+    {
+      "name": "Black Duck SCM & CI/CD Integration",
+      "role": "Software Engineer (Frontend & CI/CD Systems)",
+      "description": "Security integration platform at Black Duck that connects SCMs (GitHub, GitLab, Bitbucket, Azure) with automated security scanning workflows and CI/CD pipeline generation.",
+      "tech_stack": [
+        "React",
+        "TypeScript",
+        "SCM APIs (GitLab, GitHub, Bitbucket, Azure)",
+        "CI/CD YAML generation",
+        "Internal CLI tooling",
+        "Testing frameworks (for high coverage)"
+      ],
+      "key_capabilities": [
+        "Owned GitLab integration end-to-end, including UI and workflow logic.",
+        "Built repository and scan-type selection flows that auto-generate CI/CD YAML pipelines.",
+        "Designed dynamic OS-based pipeline generation for Linux and Windows runners.",
+        "Investigated SCM behaviors and CI/CD limitations to inform product decisions.",
+        "Increased frontend test coverage from ~21.7% to ~90.4%.",
+        "Actively debugged and resolved production issues across a multi-product environment."
+      ],
+      "why_it_matters": "Demonstrates ownership in a complex CI/CD and security product, with real production impact, system-level understanding and serious testing discipline.",
+      "status": "Production (company internal)",
       "links": {
         "github": null,
         "live": null
