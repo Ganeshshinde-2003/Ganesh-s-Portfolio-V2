@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2026-04-16",
+    "language": "en"
+  },
+  "identity": {
+    "full_name": "Ganesh Shinde",
+    "preferred_name": "Ganesh",
+    "location_city": "Bengaluru",
+    "location_state": "Karnataka",
+    "location_country": "India",
+    "short_identity": "Frontend-heavy product engineer and AI builder specializing in React/Next.js, full-stack product development, and real-world LLM workflows.",
+    "age_approx": 22
+  },
+  "links": {
+    "email": "ganeshshinde2003@gmail.com",
+    "portfolio": "https://ganeshshinde2003.netlify.app/",
+    "github": "https://github.com/Ganeshshinde-2003",
+    "linkedin": "https://www.linkedin.com/in/dev-ganesh-shinde/",
+    "healthai_repo": "https://github.com/Ganeshshinde-2003/HealthAI-2.0.0-By-Ganesh-Shinde",
+    "stratifai_repo": "https://github.com/Ganeshshinde-2003/Stratifai",
+    "healthai_live": "https://healthai-by-ganesh-shinde.streamlit.app/",
+    "stratifai_live": "https://stratifai-3znf.vercel.app/"
+  },
+  "summary": {
+    "one_liner": "Frontend-heavy product engineer and AI builder who has shipped real LLM-powered systems in healthtech, marketing, and developer tools.",
+    "short_bio": "Ganesh Shinde is a software engineer based in Bengaluru, India. He is frontend-heavy but not frontend-only: his main strength is turning product ideas into polished, usable systems, while increasingly owning backend flows, AI workflows, and end-to-end execution. He works primarily with React, Next.js, TypeScript, and modern web stacks, and has hands-on experience building AI products using LLMs, prompt pipelines, structured JSON outputs, document analysis workflows, and Vertex AI / Gemini-based systems. He has worked in startup environments, shipped user-facing products, and contributed across product, frontend, backend workflows, QA, AI integration, and developer tooling.",
+    "work_style": "Execution-focused, product-minded, comfortable in messy startup environments, prefers high ownership and direct feedback over safe corporate paths."
+  },
+  "family": {
+    "siblings": 2,
+    "parents": 2,
+    "notes": "Father and one brother work in business; Ganesh chose an engineering and product-building path."
+  },
+  "goals": {
+    "primary_career_goal": "Join a strong AI startup (preferably US-based or YC-backed) as an early / product engineer and build real AI systems end-to-end.",
+    "secondary_goals": [
+      "Grow into a high-agency AI product / founding engineer.",
+      "Deepen backend, AI systems, and infra skills while keeping strong product and UX sense.",
+      "Avoid generic, low-ownership roles and optimize for learning, impact, and responsibility."
+    ],
+    "long_term_direction": "High-agency AI product engineering and startup building."
+  },
+  "preferences": {
+    "company_type": [
+      "AI startup",
+      "YC-backed startup",
+      "High-ownership product team"
+    ],
+    "role_labels_preferred": [
+      "Product Engineer",
+      "Founding / Early Engineer",
+      "Full-stack AI Product Engineer"
+    ],
+    "role_labels_to_avoid": [
+      "Pure corporate frontend engineer",
+      "Low-ownership generic SWE roles"
+    ],
+    "optimize_for": [
+      "Learning speed",
+      "Technical depth",
+      "Ownership",
+      "Working closely with founders",
+      "Real AI systems (not just dashboards)"
+    ]
+  },
+  "work_history": [
+    {
+      "company": "Black Duck",
+      "role": "Software Engineer (Frontend & CI/CD Systems)",
+      "type": "Full-time",
+      "start_date": "2025-11-01",
+      "end_date": null,
+      "location": "Bengaluru, India (Hybrid)",
+      "highlights": [
+        "Contributes to an integration platform connecting SCMs (GitHub, GitLab, Bitbucket, Azure) with automated security scanning workflows.",
+        "Owned the GitLab integration end-to-end, including UI development, workflow logic, and system-level understanding despite being one of the junior engineers.",
+        "Built features that let users select repositories and scan types and automatically generate and inject CI/CD pipeline YAML into repositories.",
+        "Went beyond frontend by learning backend flows, SCM integrations, and CI/CD execution pipelines to deliver end-to-end functionality.",
+        "Identified a limitation in GitLab CI/CD where a single script cannot run across different runner environments (Linux/Windows) and designed dynamic OS-based pipeline generation.",
+        "Actively debugged and resolved production issues, improving stability and user experience.",
+        "Increased frontend test coverage from ~21.7% to ~90.4% by writing extensive test cases.",
+        "Contributed to internal developer tooling such as Bridge CLI and learned broader system architecture."
+      ]
+    },
+    {
+      "company": "Bewell",
+      "role": "Founding AI & Full Stack Engineer",
+      "type": "Full-time",
+      "start_date": "2025-05-01",
+      "end_date": "2025-10-31",
+      "location": "Remote (San Francisco-based startup)",
+      "highlights": [
+        "Built and scaled an AI-powered health analysis platform from 0→1 as a founding engineer.",
+        "Designed and implemented LLM-based systems (Gemini + Vertex AI) to convert unstructured health data into structured JSON insights.",
+        "Built two major AI systems: health report analysis and monthly health insights from user logs and activity.",
+        "Engineered multi-step prompt pipelines to handle large inputs and generate large structured outputs.",
+        "Developed an automated reporting system converting AI outputs into structured PDF reports, reducing manual report time from 2–5 days to under 30 seconds.",
+        "Implemented HIPAA-aware architecture using Vertex AI to handle sensitive healthcare data securely.",
+        "Led R&D on LLM reliability, prompt design, and real-world AI system behavior.",
+        "Built and optimized the Bewell mobile app (Flutter) and admin panel (React), reducing app size from ~35MB to ~14.6MB."
+      ]
+    },
+    {
+      "company": "Bewell - Internship",
+      "role": "AI & Frontend Engineer",
+      "type": "Internship",
+      "start_date": "2024-11-01",
+      "end_date": "2025-04-30",
+      "location": "Remote",
+      "highlights": [
+        "Built the Bewell mobile app from scratch and launched beta on Play Store and App Store.",
+        "Integrated AI-powered features using Gemini for personalized health insights.",
+        "Developed a React-based admin panel for handling large datasets and workflows.",
+        "Improved app performance, UX, and scalability.",
+        "Reduced app size from ~35MB to ~14.6MB, significantly improving distribution and performance."
+      ]
+    },
+    {
+      "company": "ParaTalks - Internship",
+      "role": "Frontend Developer (Intern)",
+      "type": "Internship",
+      "start_date": "2024-06-01",
+      "end_date": "2024-09-30",
+      "location": "Remote (Delhi, India)",
+      "highlights": [
+        "Built and enhanced a Flutter + Bloc mobile app frontend with appointment booking, payments, and expert showcase features.",
+        "Improved app performance and maintainability through better state management and architecture."
+      ]
+    },
+    {
+      "company": "OSCode - Internship",
+      "role": "Full Stack Developer (Intern)",
+      "type": "Internship",
+      "start_date": "2023-10-01",
+      "end_date": "2024-06-30",
+      "location": "Remote (Bengaluru, India)",
+      "highlights": [
+        "Helped build a school management desktop app using React, Tailwind, Electron, and Firebase.",
+        "Contributed to a mobile app for students and a location tracking app for school buses."
+      ]
+    },
+    {
+      "company": "Nth Space Solutions",
+      "role": "Startup Mentor (Part-time)",
+      "type": "Part-time",
+      "start_date": "2024-02-01",
+      "end_date": "2024-04-30",
+      "location": "Remote",
+      "highlights": [
+        "Mentored frontend developers on React, JavaScript, and CSS.",
+        "Guided teams on component architecture, state management, and responsive design."
+      ]
+    },
+    {
+      "company": "Haraay Studio",
+      "role": "Full Stack Developer (Intern)",
+      "type": "Internship",
+      "start_date": "2023-08-01",
+      "end_date": "2024-01-31",
+      "location": "Remote (Pune, India)",
+      "highlights": [
+        "Led development of multiple web projects from concept to deployment using React, Next.js, Tailwind, Node.js, MongoDB, MySQL, and PHP.",
+        "Worked on animation-heavy frontends using GSAP and handled deployments."
+      ]
+    },
+    {
+      "company": "Nokia (College Project Collaboration)",
+      "role": "Software Developer (Project)",
+      "type": "Project",
+      "start_date": "2023-08-01",
+      "end_date": "2023-11-30",
+      "location": "Remote",
+      "highlights": [
+        "Collaborated with Nokia professionals on a project that placed 3rd among ~20 college projects.",
+        "Demonstrated teamwork, algorithmic thinking, and remote collaboration."
+      ]
+    },
+    {
+      "company": "LoGrow Technologies LLP",
+      "role": "Full-stack Developer (Intern)",
+      "type": "Internship",
+      "start_date": "2023-05-01",
+      "end_date": "2023-07-31",
+      "location": "Remote (Bengaluru, India)",
+      "highlights": [
+        "Contributed to an admin panel frontend using React and Tailwind, and backend with MySQL.",
+        "Worked on a Flutter mobile app using Dart and Firebase for real-time data."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "HealthAI",
+      "role": "Creator",
+      "description": "AI-powered health analysis platform that uses Vertex AI / Gemini to convert unstructured health data into structured insights and reports.",
+      "tech_stack": [
+        "Python",
+        "Streamlit",
+        "Google Vertex AI",
+        "Gemini 2.5",
+        "PyMuPDF",
+        "python-docx",
+        "pandas",
+        "openpyxl",
+        "jsonschema"
+      ],
+      "key_capabilities": [
+        "Multi-format file upload (PDF, DOCX, Excel, CSV, TXT).",
+        "Biomarker analysis with clinical vs optimal ranges.",
+        "Four pillars scoring (Eat, Sleep, Move, Recover).",
+        "Monthly health reports with trend analysis and radar charts.",
+        "Supplement recommendations and root-cause analysis.",
+        "Interactive JSON outputs and prompt-testing interfaces."
+      ],
+      "why_it_matters": "Shows ability to build a vertical AI product, handle unstructured data, design prompt workflows, generate structured JSON, and ship a real deployed system.",
+      "status": "Deployed",
+      "links": {
+        "github": "https://github.com/Ganeshshinde-2003/HealthAI-2.0.0-By-Ganesh-Shinde",
+        "live": null
+      }
+    },
+    {
+      "name": "Stratifai",
+      "role": "Creator",
+      "description": "Production-quality AI SaaS platform that generates complete marketing strategies in ~60 seconds from a product URL or description.",
+      "tech_stack": [
+        "Next.js",
+        "TypeScript",
+        "FastAPI",
+        "Python",
+        "Google Vertex AI (Gemini)",
+        "BeautifulSoup4",
+        "ReportLab"
+      ],
+      "key_capabilities": [
+        "Scrapes or ingests a product URL or description.",
+        "Multi-step AI pipeline: product understanding → marketing strategy → content generation.",
+        "Generates ICP, positioning, pain points, messaging angles.",
+        "Outputs ad copy, email sequences, landing page structure, CTAs.",
+        "Exports to PDF, JSON, Markdown, CSV, and social content templates."
+      ],
+      "why_it_matters": "Demonstrates multi-step LLM workflows, strong product sense, real founder users, and case-study level validation.",
+      "status": "Deployed, used by founders",
+      "links": {
+        "github": null,
+        "live": null
+      }
+    },
+    {
+      "name": "AI Debt Collection Agent Demo",
+      "role": "Creator",
+      "description": "Full-stack demo of a multichannel AI-powered debt collection agent using Next.js, scheduling, and analytics.",
+      "tech_stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "API routes",
+        "Mock data",
+        "LLM integration (conceptual)"
+      ],
+      "key_capabilities": [
+        "Chat UI for borrower interaction.",
+        "Simulated message scheduling and follow-ups.",
+        "Analytics for collection performance.",
+        "Runnable local setup."
+      ],
+      "why_it_matters": "Shows applied AI product thinking in business process automation."
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "Responsive design",
+      "Performance optimization",
+      "Animation (GSAP)"
+    ],
+    "backend": [
+      "Node.js",
+      "API design",
+      "Firebase",
+      "Basic CI/CD pipelines",
+      "SCM integrations (GitHub, GitLab, Bitbucket, Azure)",
+      "YAML pipeline generation",
+      "Production debugging"
+    ],
+    "ai_llm": [
+      "LLM application development",
+      "Prompt engineering",
+      "Multi-step AI workflows",
+      "Structured JSON output",
+      "Document analysis",
+      "Health data AI systems",
+      "Google Vertex AI",
+      "Gemini",
+      "RAG-style workflows (conceptual and applied)",
+      "AI automation design"
+    ],
+    "other": [
+      "Flutter",
+      "Dart",
+      "Python (project-level)",
+      "MongoDB",
+      "MySQL",
+      "Electron",
+      "Testing and QA",
+      "Mentoring junior developers"
+    ]
+  },
+  "personality_and_style": {
+    "work_style": [
+      "Execution-focused",
+      "Product-minded",
+      "Comfortable with ambiguity",
+      "Prefers startup-style environments",
+      "Bias toward shipping and iteration",
+      "Likes direct, blunt feedback"
+    ],
+    "values": [
+      "Ownership",
+      "Growth",
+      "Real user impact",
+      "Learning in hard environments"
+    ],
+    "avoid": [
+      "Safe, low-ownership corporate tracks",
+      "Purely cosmetic/frontend-only work with no product impact"
+    ]
+  },
+  "qa_guidelines": {
+    "tone": "Confident, clear, and factual. Not arrogant, not self-deprecating. Startup/engineering-minded.",
+    "when_answering_about_experience": [
+      "Do not exaggerate seniority. Ganesh is early-career but with strong startup exposure.",
+      "Emphasize Bewell, Black Duck, HealthAI, and Stratifai as the strongest proof.",
+      "Mention deployed, real systems rather than only tutorials or toy projects."
+    ],
+    "when_answering_about_roles": [
+      "Say Ganesh is best aligned with AI startup product engineer / early engineer roles rather than only 'frontend developer'.",
+      "Mention he wants to work closely with founders, own features end-to-end, and build real AI systems."
+    ],
+    "when_answering_about_goals": [
+      "State clearly that Ganesh wants to join a high-quality AI startup (US/YC-like) and grow into a high-agency AI product / founding engineer."
+    ]
+  }
+}
