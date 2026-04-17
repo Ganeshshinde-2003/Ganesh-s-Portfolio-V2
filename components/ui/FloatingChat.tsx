@@ -278,10 +278,10 @@ export const FloatingChat = () => {
                   <div className="w-3 h-3 bg-purple rounded-full" />
                   <div>
                     <h3 className="text-purple font-bold text-sm">
-                      Ask Ganesh
+                      G.AI
                     </h3>
                     <p className="text-xs text-purple-300">
-                      Talk to me directly
+                      Portfolio intelligence
                     </p>
                   </div>
                 </div>
@@ -397,7 +397,7 @@ export const FloatingChat = () => {
                   onKeyDown={(e) => {
                     if (e.key === "Enter" && !isLoading) handleSendMessage();
                   }}
-                  placeholder="Ask about Ganesh..."
+                  placeholder="Ask G.AI..."
                   disabled={isLoading}
                   className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-xs text-neutral-50 placeholder-neutral-500 focus:outline-none focus:border-black-100 focus:bg-white/20 transition-all disabled:opacity-50"
                 />
