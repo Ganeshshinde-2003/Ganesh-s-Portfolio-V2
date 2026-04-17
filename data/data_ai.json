@@ -449,6 +449,32 @@
         "Runnable local setup."
       ],
       "why_it_matters": "Shows applied AI product thinking in business process automation."
+    },
+    {
+      "name": "Napkiin (B2B Buyer–Seller Platform)",
+      "role": "Creator",
+      "description": "B2B platform for buyers and sellers (e.g. alcohol brands and retail shops) that centralizes product ordering and communication, including orders placed by email.",
+      "tech_stack": [
+        "Likely: Next.js / React (frontend)",
+        "Backend API (Node/Express or similar)",
+        "Database (e.g. PostgreSQL / MongoDB)",
+        "Email integration (SMTP/API like SendGrid, Postmark, etc.)"
+      ],
+      "key_capabilities": [
+        "Separate onboarding flows for buyers and sellers.",
+        "Sellers can list products and get a landing page for their brand on the platform.",
+        "Buyers can browse sellers, place orders, and chat with sellers through the platform.",
+        "Each seller gets a unique platform email address (e.g. seller@platform.com) for order communication.",
+        "Emails sent to that address are ingested and surfaced as conversations/orders inside the platform.",
+        "Sellers can reply to those email-originated conversations from the in-app chat, and replies are delivered back to the buyer’s email.",
+        "All orders and conversations (in‑platform + email) are unified in one place for each seller."
+      ],
+      "why_it_matters": "Shows ability to design a real B2B workflow product that unifies multiple communication channels (in-app chat + email), models roles (buyer/seller), and builds something closer to a real business system instead of a toy app.",
+      "status": "In Development / Prototype",
+      "links": {
+        "github": null,
+        "live": null
+      }
     }
   ],
   "skills": {
