@@ -106,13 +106,13 @@ export default function RootLayout({
               "@type": "Person",
               name: "Ganesh Shinde",
               url: "https://ganeshshinde2003.netlify.app",
-              image: "/og-image.png",
+              image: "https://ganeshshinde2003.netlify.app/og-image.png",
               jobTitle: "AI Product Engineer & Full-Stack Developer",
               location: {
                 "@type": "Place",
                 name: "Bengaluru, Karnataka, India",
               },
-              email: "ganeshshinde2003@gmail.com",
+              email: "mailto:ganeshshinde2003@gmail.com",
               sameAs: [
                 "https://github.com/Ganeshshinde-2003",
                 "https://linkedin.com/in/dev-ganesh-shinde/",
