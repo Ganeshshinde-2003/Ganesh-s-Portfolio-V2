@@ -311,7 +311,7 @@ export const FloatingChat = () => {
                     <div
                       className={`px-3 py-2 rounded-md max-w-xs text-xs leading-snug ${
                         msg.sender === "user"
-                          ? "bg-blue-600 text-white rounded-br-none shadow-md"
+                          ? "bg-black-100 text-white rounded-br-none shadow-md"
                           : "bg-white/10 text-neutral-50 rounded-bl-none border border-white/5"
                       }`}
                     >
@@ -399,12 +399,12 @@ export const FloatingChat = () => {
                   }}
                   placeholder="Ask about Ganesh..."
                   disabled={isLoading}
-                  className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-xs text-neutral-50 placeholder-neutral-500 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all disabled:opacity-50"
+                  className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-xs text-neutral-50 placeholder-neutral-500 focus:outline-none focus:border-black-100 focus:bg-white/20 transition-all disabled:opacity-50"
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={isLoading}
-                  className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all hover:shadow-lg disabled:opacity-50"
+                  className="p-2 bg-black-100 hover:bg-black-200 text-white rounded-lg transition-all hover:shadow-lg disabled:opacity-50"
                   title="Send message"
                 >
                   <Send className="w-3.5 h-3.5" />
