@@ -38,3 +38,7 @@ next-env.d.ts
 
 # Sentry Config File
 .sentryclirc
+
+# Private SEO documentation (not public)
+SEO_GUIDE.md
+SEO_IMPLEMENTATION.md
