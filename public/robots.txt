@@ -1,0 +1,32 @@
+# SEO Robots Configuration for Ganesh Shinde's Portfolio
+# Allow all search engines to crawl all pages
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block AI training bots (optional - set to Disallow if you don't want your content used for AI training)
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://ganeshshinde2003.netlify.app/sitemap.xml
