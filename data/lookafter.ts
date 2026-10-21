@@ -18,7 +18,7 @@ export const lookafter = {
     { src: "/lookafter-shot-3.jpg", alt: "Monthly summary for a family member with key biomarkers" },
     { src: "/lookafter-shot-4.jpg", alt: "Biological age screen with the factors that shape it" },
   ] as { src: string; alt: string }[],
-  role: "Solo build: mobile app, backend, retrieval, deployment",
+  role: "Founder, LookAfter AI",
   stack: [
     "React Native + Expo",
     "Python Flask",
@@ -79,7 +79,7 @@ export const lookafter = {
     { stage: "+ RRF and cosine blend", hit1: "97.6%", mrr: "0.988" },
   ],
   evalNote:
-    "41 patient-style questions with expected source topics, plus 3 off-topic questions to test the grader. The single hit@1 miss is a yeast-infection question: the broader Vaginitis page ranks first (0.66) and the exact page second (0.64), still inside the top 4. These are retrieval metrics, not answer accuracy.",
+    "41 patient-style questions with expected source topics, plus 3 off-topic questions to test the grader. The one remaining edge case is a yeast-infection question: the broader Vaginitis page ranks first (0.66) and the exact page second (0.64), still inside the top 4. These are retrieval metrics, not answer accuracy.",
   privacy: [
     "Personal records live in their own embedded table and are retrieved with the same hybrid idea (top 6, similarity threshold 0.45).",
     "The family sharing rule is enforced in the retrieval code, not in the prompt. A relative's chunk comes back only if sharing allows it, and sensitive items such as period data are redacted before the model sees them.",

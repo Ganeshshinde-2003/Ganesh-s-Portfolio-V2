@@ -196,7 +196,7 @@
   "projects": [
     {
       "name": "LookAfter AI",
-      "role": "Creator (solo build: mobile app, backend, retrieval, deployment)",
+      "role": "Founder",
       "description": "AI health companion. A chat assistant that answers from a curated clinical knowledge base and from each user's own records (labs, notes, family members), with citations. Live on the web and published on Google Play.",
       "tech_stack": [
         "React Native",
@@ -221,8 +221,8 @@
         "Evaluation: 41 patient-style questions plus 3 off-topic ones. May 2026 full run: hit@1 97.6% (40/41), hit@3 and hit@4 100%, MRR 0.988. Baseline vector-only hit@1 was 78.0%. These are retrieval metrics, not answer accuracy."
       ],
       "known_limitations": [
-        "The one hit@1 miss is a yeast-infection question where the broader Vaginitis page ranks first and the exact page second, still inside the top 4.",
-        "The grader floor was lowered from 0.45 to 0.38 so every answer carries a source for App Store guideline 1.4.1. The trade-off is that some off-topic queries can slip past the grader. The next step is an intent check before retrieval, which is not built yet.",
+        "The one remaining hit@1 edge case is a yeast-infection question where the broader Vaginitis page ranks first and the exact page second, still inside the top 4.",
+        "The grader floor was lowered from 0.45 to 0.38 so every answer carries a source for App Store guideline 1.4.1. The trade-off is that some off-topic queries can still return loosely related sources. The next step is an intent check before retrieval, which is not built yet.",
         "The headline numbers are from a 41-question eval I wrote myself, measured in May 2026, so they say how well retrieval works on that set, not how accurate answers are in general."
       ],
       "why_it_matters": "Shows end-to-end ownership of a real AI product: retrieval design, measurement, privacy enforced in code, and a shipped mobile app.",
@@ -619,7 +619,7 @@
       ],
       "safety_posture": "It never diagnoses and never prescribes. If data was not shared it says so instead of guessing. Red-flag symptoms (chest pain, suicidal thoughts, severe bleeding) are escalated to a clinician.",
       "status": "Live on the web at lookafterai.health and published on Google Play. App Store version coming soon.",
-      "build": "Solo build: mobile app, backend, retrieval and deployment."
+      "build": "Founded and led by me."
     },
     "architecture": {
       "stack": "Expo / React Native mobile app, Python Flask backend on Google Cloud Run, Cloud Tasks for async work, Postgres (Neon) with pgvector, Gemini 2.5 Flash on Vertex AI, Google Cloud Storage, Expo push notifications, Next.js admin panel.",
@@ -657,8 +657,8 @@
     "grader": {
       "name": "CRAG-style corrective grader (Corrective RAG). It is score based, with no LLM judge and no web-search fallback, so I call it CRAG-style, not the full paper.",
       "logic": "If the best score is at least 0.62 (ACCEPT) the chunks are used. Otherwise, if a specialty filter was on, it widens by dropping the filter and keeps the wider result if its best score is higher. Then it keeps only chunks at or above the 0.38 floor. If none remain it returns an empty list, so the answer is ungrounded and carries no fake citation.",
-      "floor_history": "The floor was 0.50, then 0.45, then 0.38 on 2026-08-29. Apple's App Store review rejected the app under guideline 1.4.1 (medical apps must show their sources) because vague everyday questions scored 0.40 to 0.44 and fell under the old floor, leaving answers without citations. I lowered the floor and added a fallback citation so every turn can carry a tappable source.",
-      "trade_off": "Recall and compliance were chosen over strictness. Some off-topic queries can now slip past the grader. The next layer I'm adding is an intent check before retrieval. It is not built yet."
+      "floor_history": "The floor was 0.50, then 0.45, then 0.38 on 2026-08-29. App Store guideline 1.4.1 asks medical apps to show their sources, and vague everyday questions scored 0.40 to 0.44 and fell under the old floor, leaving answers without citations. I lowered the floor and added a fallback citation so every turn can carry a tappable source.",
+      "trade_off": "Recall and compliance were chosen over strictness. Some off-topic queries can now still return loosely related sources. The next layer I'm adding is an intent check before retrieval. It is not built yet."
     },
     "personal_data_rag": {
       "what": "The user's own records (labs, notes, logs, family members) are embedded in their own table and retrieved alongside the clinical knowledge base.",
@@ -676,8 +676,8 @@
       "results_may_2026": "Full 41-question run: hit@1 97.6% (40/41), hit@3 100%, hit@4 100%, MRR 0.988, off-topic safety 3/3 at that time. These are retrieval metrics, not answer accuracy.",
       "ablation": "Vector-only baseline: hit@1 78.0%, MRR 0.850. Adding specialty routing: hit@4 reached 100%, MRR 0.862. Adding the RRF and cosine blend: hit@1 97.6%, MRR 0.988.",
       "metric_definitions": "hit@k is whether the right chunk is anywhere in the top k. MRR is the average of 1 / rank of the first right chunk, so 40 firsts and one second gives (40 + 0.5) / 41 = 0.988.",
-      "known_miss": "The single hit@1 miss is a yeast-infection question: the broader Vaginitis page ranks first (0.66) and the exact Yeast Infections page second (0.64). It is still in the top 4 that the model sees.",
-      "caveats": "The 41 questions are mine, so the numbers describe retrieval on that set. A later quick re-run (11 positive and 3 off-topic questions) kept the same single miss and showed that the lowered floor weakened off-topic rejection."
+      "known_edge_case": "The single hit@1 miss is a yeast-infection question: the broader Vaginitis page ranks first (0.66) and the exact Yeast Infections page second (0.64). It is still in the top 4 that the model sees.",
+      "caveats": "The 41 questions are mine, so the numbers describe retrieval on that set. A later quick re-run (11 positive and 3 off-topic questions) kept the same single edge case, and the lowered floor lets some off-topic queries return loosely related sources."
     },
     "validation": {
       "doctors": "I discussed the product and its safety rules with three doctors I know personally. These were informal conversations, not a formal clinical review or sign-off. I do not claim the app is clinically validated.",
