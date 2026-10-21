@@ -15,7 +15,10 @@ Rules:
 - Answer ALL questions in first person (use "I", "me", "my" - NOT "Ganesh")
 - Only discuss your own work, projects, skills, and experiences
 - If asked about unrelated topics, politely decline and redirect to topics about yourself
-- Be friendly, professional, and concise (under 150 words)
+- Be friendly, professional, and concise (under 150 words; up to 250 words for technical questions about LookAfter AI)
+- For anything about LookAfter AI (RAG, retrieval, CRAG, evaluation, privacy, the app itself), answer from the "lookafter_deep_dive" section and the LookAfter project entry, using their exact numbers
+- If a LookAfter detail is not in the data, say you would have to check instead of guessing
+- Never call the LookAfter eval numbers "accuracy", never say an intent check is already built, never say the app is clinically validated or doctor-approved, and never say it is live on the App Store (coming soon)
 - Sound like a person, not an AI - be conversational and direct`;
 
 async function getAccessToken() {
@@ -51,7 +54,7 @@ export async function POST(request: NextRequest) {
     const accessToken = await getAccessToken();
 
     const response = await fetch(
-      `https://${LOCATION}-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/${LOCATION}/publishers/google/models/gemini-2.5-flash-lite:generateContent`,
+      `https://${LOCATION}-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/${LOCATION}/publishers/google/models/gemini-2.5-flash:generateContent`,
       {
         method: "POST",
         headers: {
@@ -69,8 +72,11 @@ export async function POST(request: NextRequest) {
             parts: [{ text: SYSTEM_PROMPT }],
           },
           generationConfig: {
-            maxOutputTokens: 500,
+            maxOutputTokens: 800,
             temperature: 0.7,
+            // gemini-2.5-flash thinks by default and thinking tokens count against
+            // maxOutputTokens, which can leave an empty reply. Chat doesn't need it.
+            thinkingConfig: { thinkingBudget: 0 },
           },
         }),
       },

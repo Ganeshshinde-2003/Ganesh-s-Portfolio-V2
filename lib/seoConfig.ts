@@ -7,7 +7,7 @@ export const SEO_CONFIG = {
   },
   author: {
     name: "Ganesh Shinde",
-    email: "ganeshshinde2003@gmail.com",
+    email: "sindheganesh2004@gmail.com",
     location: "Bengaluru, Karnataka, India",
     bio: "Full-stack AI product engineer with founding startup experience. Specializes in LLM systems, AI automation, and end-to-end product development.",
   },

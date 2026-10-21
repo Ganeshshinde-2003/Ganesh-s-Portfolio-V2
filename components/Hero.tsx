@@ -60,13 +60,22 @@ const Hero = () => {
             Hi! I&apos;m {heroContent.name}, {heroContent.subtitle}
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 w-full justify-center">
+            <a href="#about" className="w-full md:w-auto">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a href="/case-studies/lookafter-ai" className="w-full md:w-auto">
+              <MagicButton
+                title="LookAfter AI case study"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

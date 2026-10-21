@@ -10,6 +10,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- LookAfter AI case study -->
+  <url>
+    <loc>https://ganeshshinde2003.netlify.app/case-studies/lookafter-ai</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Projects Section -->
   <url>
     <loc>https://ganeshshinde2003.netlify.app/#projects</loc>

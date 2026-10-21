@@ -112,7 +112,7 @@ export default function RootLayout({
                 "@type": "Place",
                 name: "Bengaluru, Karnataka, India",
               },
-              email: "mailto:ganeshshinde2003@gmail.com",
+              email: "mailto:sindheganesh2004@gmail.com",
               sameAs: [
                 "https://github.com/Ganeshshinde-2003",
                 "https://linkedin.com/in/dev-ganesh-shinde/",

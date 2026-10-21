@@ -26,11 +26,19 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bgimg" />
                 </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute inset-0 w-full h-full object-cover lg:rounded-3xl"
-                />
+                {item.img ? (
+                  <img
+                    src={item.img}
+                    alt="cover"
+                    className="z-10 absolute inset-0 w-full h-full object-cover lg:rounded-3xl"
+                  />
+                ) : (
+                  <div className="z-10 absolute inset-0 flex items-center justify-center lg:rounded-3xl bg-gradient-to-br from-[#13162D] to-[#2a1f4d]">
+                    <span className="text-2xl lg:text-4xl font-bold text-purple text-center px-4">
+                      {item.title.split(" – ")[0]}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -64,12 +72,13 @@ const RecentProjects = () => {
 
                 <a
                   href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(item.link.startsWith("http")
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="flex justify-center items-center cursor-pointer hover:opacity-80 transition-opacity"
                 >
                   <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
+                    {item.cta ?? "Check Live Site"}
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </a>

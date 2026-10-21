@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0",
-    "last_updated": "2026-04-16",
+    "last_updated": "2026-10-21",
     "language": "en"
   },
   "identity": {
@@ -14,14 +14,17 @@
     "age_approx": 22
   },
   "links": {
-    "email": "ganeshshinde2003@gmail.com",
+    "email": "sindheganesh2004@gmail.com",
     "portfolio": "https://ganeshshinde2003.netlify.app/",
     "github": "https://github.com/Ganeshshinde-2003",
     "linkedin": "https://www.linkedin.com/in/dev-ganesh-shinde/",
     "healthai_repo": "https://github.com/Ganeshshinde-2003/HealthAI-2.0.0-By-Ganesh-Shinde",
     "stratifai_repo": "https://github.com/Ganeshshinde-2003/Stratifai",
     "healthai_live": "https://healthai-by-ganesh-shinde.streamlit.app/",
-    "stratifai_live": "https://stratifai-3znf.vercel.app/"
+    "stratifai_live": "https://stratifai-3znf.vercel.app/",
+    "lookafter_live": "https://www.lookafterai.health/",
+    "lookafter_case_study": "https://ganeshshinde2003.netlify.app/case-studies/lookafter-ai",
+    "lookafter_google_play": "https://play.google.com/store/apps/details?id=com.lookafterai.health"
   },
   "summary": {
     "one_liner": "AI product engineer with founding experience who has shipped real LLM systems in healthtech, marketing, and developer tools.",
@@ -191,6 +194,52 @@
     }
   ],
   "projects": [
+    {
+      "name": "LookAfter AI",
+      "role": "Creator (solo build: mobile app, backend, retrieval, deployment)",
+      "description": "AI health companion. A chat assistant that answers from a curated clinical knowledge base and from each user's own records (labs, notes, family members), with citations. Live on the web and published on Google Play.",
+      "tech_stack": [
+        "React Native",
+        "Expo",
+        "Python",
+        "Flask",
+        "Gemini 2.5 Flash on Vertex AI",
+        "Postgres",
+        "pgvector",
+        "Vertex text-embedding-004",
+        "Google Cloud Run",
+        "Cloud Tasks",
+        "Next.js admin panel"
+      ],
+      "key_capabilities": [
+        "Knowledge base of 4,285 chunks from 7 US public-domain sources (MedlinePlus, NIDDK, CDC, NHLBI, NICHD, NIMH, health.gov) across 9 specialties, with section-aware chunking (1,800 target, 3,000 max, 220 overlap).",
+        "Hybrid retrieval: pgvector vector search (HNSW, cosine) plus Postgres full-text search (GIN on a tsvector column), merged with Reciprocal Rank Fusion, then a 0.2 RRF + 0.8 cosine blend.",
+        "Specialty routing from a keyword map, falling back to an unfiltered search when the routed one returns fewer than 2 results; dedup by source; 1-hour TTL/LRU retrieval cache and a separate embedding cache.",
+        "CRAG-style grader: accept at a best score of 0.62, otherwise widen the search by dropping the specialty filter, keep chunks above a 0.38 floor, and return nothing (ungrounded, no fake citation) if none qualify. It is score-based with no LLM judge and no web fallback, so it is CRAG-style, not the full paper.",
+        "Personal-data RAG with family sharing enforced in the retrieval code (not the prompt), redaction of sensitive items such as period data, and the 3 most recent shared chunks per member always included.",
+        "Code-owned confidence tiers 1 to 4 that decide which UI blocks can render and how ambitious the wording is; trend language only with at least 3 supporting points. Design rule: the model proposes language, code decides numbers and what renders.",
+        "Evaluation: 41 patient-style questions plus 3 off-topic ones. May 2026 full run: hit@1 97.6% (40/41), hit@3 and hit@4 100%, MRR 0.988. Baseline vector-only hit@1 was 78.0%. These are retrieval metrics, not answer accuracy."
+      ],
+      "known_limitations": [
+        "The one hit@1 miss is a yeast-infection question where the broader Vaginitis page ranks first and the exact page second, still inside the top 4.",
+        "The grader floor was lowered from 0.45 to 0.38 so every answer carries a source for App Store guideline 1.4.1. The trade-off is that some off-topic queries can slip past the grader. The next step is an intent check before retrieval, which is not built yet.",
+        "The headline numbers are from a 41-question eval I wrote myself, measured in May 2026, so they say how well retrieval works on that set, not how accurate answers are in general."
+      ],
+      "why_it_matters": "Shows end-to-end ownership of a real AI product: retrieval design, measurement, privacy enforced in code, and a shipped mobile app.",
+      "status": "Live. Web app at lookafterai.health and published on Google Play. The App Store version is coming soon.",
+      "links": {
+        "live": "https://www.lookafterai.health/",
+        "case_study": "https://ganeshshinde2003.netlify.app/case-studies/lookafter-ai",
+        "google_play": "https://play.google.com/store/apps/details?id=com.lookafterai.health"
+      },
+      "methodology": [
+        "Chose sources by licensing first: only US federal agency pages (public domain under 17 USC 105), so no licence, attribution or takedown risk.",
+        "Dropped NHS, WHO, NICE, RCOG, ACOG and heart.org for licence or copyright reasons and links to them instead of ingesting them. FDA pages blocked automated collection, and the ODS fact sheets did not make the final set.",
+        "Kept seven sources (MedlinePlus, NIDDK, CDC, NHLBI, NICHD, NIMH, health.gov), nine specialty folders, and a source-URL log so every chunk can be cited.",
+        "Tested chunk sizes against the eval: finer chunking took chunks from 1,420 to 1,928 with no change in score, so the section-aware setup stayed.",
+        "Talked to three doctors I know personally about the product and safety rules. These were informal conversations, not a clinical review or sign-off, and the app is not claimed to be clinically validated."
+      ]
+    },
     {
       "name": "HealthAI",
       "role": "Creator",
@@ -555,6 +604,89 @@
     ],
     "when_answering_about_goals": [
       "State clearly that Ganesh wants to join a high-quality AI startup (US/YC-like) and grow into a high-agency AI product / founding engineer."
+    ]
+  },
+  "lookafter_deep_dive": {
+    "how_to_use_this": "Answer any question about LookAfter AI from this section, in first person, with the exact numbers given here. If a detail is not in this section or in the LookAfter project entry, say you would have to check rather than guessing. Never call the eval numbers 'accuracy' (they are retrieval metrics). Never claim an intent check or domain gate is built (it is the next planned layer). Never call the app clinically validated or doctor-approved. The App Store version is coming soon, not live.",
+    "one_liner": "LookAfter AI is an AI family health companion. A chat assistant answers from a curated clinical knowledge base and from each user's own records, with citations and permission-aware family sharing.",
+    "product": {
+      "features": [
+        "Add Family Member (family graph with sharing permissions)",
+        "AI Assistant: personal and family/group chat with permission-aware intent routing, for example 'Did Dad log breakfast today?' and care notifications",
+        "Analysis: lab upload, or an onboarding-based snapshot",
+        "Gender-specific daily logging with weekly and monthly reports, including a PCOD/PCOS flow",
+        "Rich answer cards (stat cards, comparison tables, progress rings, callouts) instead of walls of text"
+      ],
+      "safety_posture": "It never diagnoses and never prescribes. If data was not shared it says so instead of guessing. Red-flag symptoms (chest pain, suicidal thoughts, severe bleeding) are escalated to a clinician.",
+      "status": "Live on the web at lookafterai.health and published on Google Play. App Store version coming soon.",
+      "build": "Solo build: mobile app, backend, retrieval and deployment."
+    },
+    "architecture": {
+      "stack": "Expo / React Native mobile app, Python Flask backend on Google Cloud Run, Cloud Tasks for async work, Postgres (Neon) with pgvector, Gemini 2.5 Flash on Vertex AI, Google Cloud Storage, Expo push notifications, Next.js admin panel.",
+      "chat_flow": [
+        "Load the family roster",
+        "Embed the user message",
+        "Retrieve from the user's own records (personal RAG) and from the clinical knowledge base (clinical RAG)",
+        "Drop personal chunks below a 0.45 similarity gate",
+        "Compute data quality and a confidence tier 1 to 4",
+        "Save the user message first, then build the prompt with history",
+        "Call Gemini with backoff on rate limits (429)",
+        "Parse the reply, then code enforces which UI blocks are allowed",
+        "Scan for diagnosis-like wording (advisory flag only, it logs and does not block)",
+        "Log cost, attach citations, save the reply"
+      ],
+      "design_rule": "The model proposes language, code decides numbers and what renders."
+    },
+    "knowledge_base": {
+      "size": "4,285 chunks across 9 specialties: cardiometabolic, endocrine, fitness, general, labs, mental-health, nutrition, obgyn, sleep.",
+      "sources": "7 US-government public-domain sources: MedlinePlus 1,928 chunks, NIDDK 1,037, CDC 739, NHLBI 254, NICHD 152, NIMH 99, health.gov 76.",
+      "why_these": "Licensing first: US federal pages are public domain (17 USC 105), so no licence, attribution or takedown risk. NHS, WHO, NICE, RCOG, ACOG and heart.org were dropped for licence or copyright reasons and are linked, not ingested. FDA pages blocked automated collection and the ODS fact sheets did not make the final set.",
+      "process": "Pages saved as text, one folder per specialty (the folder name becomes the specialty tag), every file logged with its source URL so each chunk can cite its source. Paywalled and login-walled pages skipped.",
+      "chunking": "Section-aware: 1,800 characters target, 3,000 max, 220 overlap. Finer chunking raised the chunk count from 1,420 to 1,928 with no change in eval score, so the setup stayed."
+    },
+    "retrieval": {
+      "index": "Chunks embedded with Vertex text-embedding-004 (768 dimensions, fixed by the model) and stored in Postgres with pgvector in a vector(768) column. HNSW index (layered graph, approximate nearest neighbour) for vectors. A tsvector column (text_tsv) with a GIN index (inverted index) for keyword search, ranked with ts_rank.",
+      "hybrid": "Each question runs a vector search (top 12) and a keyword search (top 12). Embeddings are good at meaning and weak on exact tokens like HbA1c, LDL or drug names. Keywords are the opposite. Running both helped short lab-term queries.",
+      "cosine": "pgvector returns cosine distance (0 is identical, bigger is more different). The code flips it once, score = 1 - distance, so higher means more relevant and every threshold uses the flipped score.",
+      "fusion": "Reciprocal Rank Fusion: 1 / (60 + position) per list, summed, with positions starting at 0. It uses ranks, not raw scores, because cosine and ts_rank are on different scales.",
+      "blend": "Final score = 0.2 x RRF + 0.8 x cosine, both min-max normalised to 0..1 across the candidates. This is a score blend, not a cross-encoder or LLM reranker. The weights were tuned on the eval near-misses. I did not run a keyword-only ablation.",
+      "routing": "A keyword map picks the specialty with the most matching words. If the routed search returns fewer than 2 results it retries unfiltered, so routing cannot starve recall.",
+      "dedup_and_k": "Results are deduplicated by (source, source_ref) before cutting to k, so one topic cannot fill every slot. k is 4 for the eval and 3 in chat.",
+      "caching": "Two caches. A retrieval cache is checked first and stores the final ranked chunks (1 hour TTL, LRU of 256, global knowledge-base queries only, never personal data, key = query + specialty + k + KB version). A separate embedding cache (LRU, 256 entries) stores query vectors so the same text never calls Vertex twice."
+    },
+    "grader": {
+      "name": "CRAG-style corrective grader (Corrective RAG). It is score based, with no LLM judge and no web-search fallback, so I call it CRAG-style, not the full paper.",
+      "logic": "If the best score is at least 0.62 (ACCEPT) the chunks are used. Otherwise, if a specialty filter was on, it widens by dropping the filter and keeps the wider result if its best score is higher. Then it keeps only chunks at or above the 0.38 floor. If none remain it returns an empty list, so the answer is ungrounded and carries no fake citation.",
+      "floor_history": "The floor was 0.50, then 0.45, then 0.38 on 2026-08-29. Apple's App Store review rejected the app under guideline 1.4.1 (medical apps must show their sources) because vague everyday questions scored 0.40 to 0.44 and fell under the old floor, leaving answers without citations. I lowered the floor and added a fallback citation so every turn can carry a tappable source.",
+      "trade_off": "Recall and compliance were chosen over strictness. Some off-topic queries can now slip past the grader. The next layer I'm adding is an intent check before retrieval. It is not built yet."
+    },
+    "personal_data_rag": {
+      "what": "The user's own records (labs, notes, logs, family members) are embedded in their own table and retrieved alongside the clinical knowledge base.",
+      "steps": "A family-tree filter runs in SQL, 24 candidates are over-fetched (K=6 x 4), then a Python can_view_chunk check applies the sharing rules, period data is redacted before the model sees it, the top 6 are kept, and the 3 most recent shared chunks per member are added at score 1.0 so a fresh record is not lost to a weak match. A 0.45 similarity threshold applies later.",
+      "privacy": "The sharing gate lives in the retrieval code, not in the prompt and not in the SQL. A relative's chunk comes back only if sharing allows it."
+    },
+    "confidence_tiers": {
+      "what": "Code-owned tiers 1 to 4 from how many data points back an answer: tier 1 is 0 to 1 points, tier 2 is 2 to 3, tier 3 is 4 to 7, tier 4 is 8 or more.",
+      "controls": "The tier decides which UI blocks may render, how ambitious the wording can be, and the confidence chip in the app (Limited, Some, Good, Strong data). Tiers 3 and 4 allow the same blocks. The difference is wording ambition and the chip.",
+      "trends": "Trend language is allowed only with at least 3 supporting data points. The prompt says no trend language and code strips the trend field otherwise. The model cannot raise its own confidence.",
+      "freshness": "Data up to 2 days old is fresh, up to 7 days is aging, older is stale."
+    },
+    "evaluation": {
+      "set": "41 patient-style questions with expected source topics, plus 3 off-topic questions to test the grader. Script eval_clinical_kb.py with a labelled fixture. Release gate: hit@4 of at least 85% and full off-topic safety.",
+      "results_may_2026": "Full 41-question run: hit@1 97.6% (40/41), hit@3 100%, hit@4 100%, MRR 0.988, off-topic safety 3/3 at that time. These are retrieval metrics, not answer accuracy.",
+      "ablation": "Vector-only baseline: hit@1 78.0%, MRR 0.850. Adding specialty routing: hit@4 reached 100%, MRR 0.862. Adding the RRF and cosine blend: hit@1 97.6%, MRR 0.988.",
+      "metric_definitions": "hit@k is whether the right chunk is anywhere in the top k. MRR is the average of 1 / rank of the first right chunk, so 40 firsts and one second gives (40 + 0.5) / 41 = 0.988.",
+      "known_miss": "The single hit@1 miss is a yeast-infection question: the broader Vaginitis page ranks first (0.66) and the exact Yeast Infections page second (0.64). It is still in the top 4 that the model sees.",
+      "caveats": "The 41 questions are mine, so the numbers describe retrieval on that set. A later quick re-run (11 positive and 3 off-topic questions) kept the same single miss and showed that the lowered floor weakened off-topic rejection."
+    },
+    "validation": {
+      "doctors": "I discussed the product and its safety rules with three doctors I know personally. These were informal conversations, not a formal clinical review or sign-off. I do not claim the app is clinically validated.",
+      "users": "A small group of real users, about 5 to 10, not counting friends."
+    },
+    "next_steps": [
+      "An intent check before retrieval (is this a health question?) to tighten off-topic rejection without losing recall on vague questions",
+      "A reranker for near-ties like the Vaginitis versus Yeast Infections case",
+      "A larger, independently labelled eval set"
     ]
   }
 }

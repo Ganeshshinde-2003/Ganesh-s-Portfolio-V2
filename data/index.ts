@@ -9,15 +9,16 @@ export const heroContent = {
   name: "Ganesh Shinde",
   title: "AI Product Engineer & Full-Stack Developer",
   subtitle:
-    "I build end‑to‑end LLM products — from health analysis on Vertex/Gemini to B2B workflows and CI/CD automation.",
+    "I build production RAG and AI health products, from retrieval and evals to the mobile app, plus B2B workflows and CI/CD automation.",
   location: "Bengaluru, India · Open to remote founding/early AI roles",
   topTagline: "Scaling AI Systems with Intent",
 };
 export const gridItems = [
   {
     id: 1,
-    title: "0→1 AI health systems",
-    description: "AI health platform turning lab data into structured reports.",
+    title: "Production RAG for health",
+    description:
+      "LookAfter AI: hybrid retrieval, CRAG-style grader, 97.6% hit@1. Live on Google Play.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -79,12 +80,13 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 1,
-    title: "HealthAI – AI-powered health report pipeline",
-    des: "End-to-end health analysis platform using Vertex AI (Gemini) that ingests lab PDFs/CSVs and health assessments, runs multi-step analysis, and outputs structured JSON plus human-readable reports. Reduced manual report creation from 2–5 days to under a minute.",
-    img: "/p1.png",
+    id: 5,
+    title: "LookAfter AI – AI health companion with hybrid RAG",
+    des: "Mobile health assistant that answers from a 4,285-chunk clinical knowledge base and each user's own records. Hybrid pgvector + Postgres full-text retrieval, Reciprocal Rank Fusion, a CRAG-style grader and permission-aware family sharing. 97.6% hit@1 and 100% hit@4 on a 41-question retrieval eval.",
+    img: "/lookafter-cover.png",
     iconLists: ["/python.svg", "/gemini.svg", "/vertexai.svg"],
-    link: "https://healthai-by-ganesh-shinde.streamlit.app/",
+    link: "/case-studies/lookafter-ai",
+    cta: "Read case study",
   },
   {
     id: 2,
@@ -99,6 +101,14 @@ export const projects = [
       "/ts.svg",
     ],
     link: "https://stratifai-3znf.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "HealthAI – AI-powered health report pipeline",
+    des: "End-to-end health analysis platform using Vertex AI (Gemini) that ingests lab PDFs/CSVs and health assessments, runs multi-step analysis, and outputs structured JSON plus human-readable reports. Reduced manual report creation from 2–5 days to under a minute.",
+    img: "/p1.png",
+    iconLists: ["/python.svg", "/gemini.svg", "/vertexai.svg"],
+    link: "https://healthai-by-ganesh-shinde.streamlit.app/",
   },
   {
     id: 3,
