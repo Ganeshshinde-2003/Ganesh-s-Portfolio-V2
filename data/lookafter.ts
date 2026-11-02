@@ -7,8 +7,7 @@ export const lookafter = {
   tagline: "An AI health companion that answers from a clinical knowledge base and your own family's records.",
   liveUrl: "https://www.lookafterai.health/",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.lookafterai.health",
-  // iOS is not live yet. Set to the App Store URL to turn the button into a link.
-  appStoreUrl: "",
+  appStoreUrl: "https://apps.apple.com/in/app/lookafter-ai/id6786725245",
   // File names in /public (e.g. "/lookafter-shot-1.png"). The strip renders only when this has entries.
   screenshots: [
     { src: "/lookafter-shot-1.jpg", alt: "LookAfter AI home screen showing a four-person family circle and an alert that Dad missed a medication" },
@@ -74,7 +73,7 @@ export const lookafter = {
     },
   ],
   evalRows: [
-    { stage: "Vector search only", hit1: "78.0%", mrr: "0.850" },
+    { stage: "Baseline (hybrid search + grader)", hit1: "78.0%", mrr: "0.850" },
     { stage: "+ specialty routing", hit1: "-", mrr: "0.862", note: "hit@4 reached 100%" },
     { stage: "+ RRF and cosine blend", hit1: "97.6%", mrr: "0.988" },
   ],

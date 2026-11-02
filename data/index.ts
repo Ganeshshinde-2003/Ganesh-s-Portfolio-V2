@@ -18,7 +18,7 @@ export const gridItems = [
     id: 1,
     title: "Production RAG for health",
     description:
-      "LookAfter AI: hybrid retrieval, CRAG-style grader, 97.6% hit@1. Live on Google Play.",
+      "LookAfter AI: hybrid retrieval, CRAG-style grader, 97.6% hit@1. Live on Google Play and the App Store.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",

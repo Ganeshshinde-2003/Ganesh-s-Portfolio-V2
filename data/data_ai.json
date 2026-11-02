@@ -24,7 +24,8 @@
     "stratifai_live": "https://stratifai-3znf.vercel.app/",
     "lookafter_live": "https://www.lookafterai.health/",
     "lookafter_case_study": "https://ganeshshinde2003.netlify.app/case-studies/lookafter-ai",
-    "lookafter_google_play": "https://play.google.com/store/apps/details?id=com.lookafterai.health"
+    "lookafter_google_play": "https://play.google.com/store/apps/details?id=com.lookafterai.health",
+    "lookafter_app_store": "https://apps.apple.com/in/app/lookafter-ai/id6786725245"
   },
   "summary": {
     "one_liner": "AI product engineer with founding experience who has shipped real LLM systems in healthtech, marketing, and developer tools.",
@@ -197,7 +198,7 @@
     {
       "name": "LookAfter AI",
       "role": "Founder",
-      "description": "AI health companion. A chat assistant that answers from a curated clinical knowledge base and from each user's own records (labs, notes, family members), with citations. Live on the web and published on Google Play.",
+      "description": "AI health companion. A chat assistant that answers from a curated clinical knowledge base and from each user's own records (labs, notes, family members), with citations. Live on the web, Google Play and the App Store.",
       "tech_stack": [
         "React Native",
         "Expo",
@@ -226,11 +227,12 @@
         "The headline numbers are from a 41-question eval I wrote myself, measured in May 2026, so they say how well retrieval works on that set, not how accurate answers are in general."
       ],
       "why_it_matters": "Shows end-to-end ownership of a real AI product: retrieval design, measurement, privacy enforced in code, and a shipped mobile app.",
-      "status": "Live. Web app at lookafterai.health and published on Google Play. The App Store version is coming soon.",
+      "status": "Live. Web app at lookafterai.health and published on Google Play and the App Store.",
       "links": {
         "live": "https://www.lookafterai.health/",
         "case_study": "https://ganeshshinde2003.netlify.app/case-studies/lookafter-ai",
-        "google_play": "https://play.google.com/store/apps/details?id=com.lookafterai.health"
+        "google_play": "https://play.google.com/store/apps/details?id=com.lookafterai.health",
+        "app_store": "https://apps.apple.com/in/app/lookafter-ai/id6786725245"
       },
       "methodology": [
         "Chose sources by licensing first: only US federal agency pages (public domain under 17 USC 105), so no licence, attribution or takedown risk.",
@@ -607,7 +609,7 @@
     ]
   },
   "lookafter_deep_dive": {
-    "how_to_use_this": "Answer any question about LookAfter AI from this section, in first person, with the exact numbers given here. If a detail is not in this section or in the LookAfter project entry, say you would have to check rather than guessing. Never call the eval numbers 'accuracy' (they are retrieval metrics). Never claim an intent check or domain gate is built (it is the next planned layer). Never call the app clinically validated or doctor-approved. The App Store version is coming soon, not live.",
+    "how_to_use_this": "Answer any question about LookAfter AI from this section, in first person, with the exact numbers given here. If a detail is not in this section or in the LookAfter project entry, say you would have to check rather than guessing. Never call the eval numbers 'accuracy' (they are retrieval metrics). Never claim an intent check or domain gate is built (it is the next planned layer). Never call the app clinically validated or doctor-approved. The app is live on both Google Play and the App Store.",
     "one_liner": "LookAfter AI is an AI family health companion. A chat assistant answers from a curated clinical knowledge base and from each user's own records, with citations and permission-aware family sharing.",
     "product": {
       "features": [
@@ -618,7 +620,7 @@
         "Rich answer cards (stat cards, comparison tables, progress rings, callouts) instead of walls of text"
       ],
       "safety_posture": "It never diagnoses and never prescribes. If data was not shared it says so instead of guessing. Red-flag symptoms (chest pain, suicidal thoughts, severe bleeding) are escalated to a clinician.",
-      "status": "Live on the web at lookafterai.health and published on Google Play. App Store version coming soon.",
+      "status": "Live on the web at lookafterai.health and published on Google Play and the App Store.",
       "build": "Founded and led by me."
     },
     "architecture": {
@@ -674,7 +676,7 @@
     "evaluation": {
       "set": "41 patient-style questions with expected source topics, plus 3 off-topic questions to test the grader. Script eval_clinical_kb.py with a labelled fixture. Release gate: hit@4 of at least 85% and full off-topic safety.",
       "results_may_2026": "Full 41-question run: hit@1 97.6% (40/41), hit@3 100%, hit@4 100%, MRR 0.988, off-topic safety 3/3 at that time. These are retrieval metrics, not answer accuracy.",
-      "ablation": "Vector-only baseline: hit@1 78.0%, MRR 0.850. Adding specialty routing: hit@4 reached 100%, MRR 0.862. Adding the RRF and cosine blend: hit@1 97.6%, MRR 0.988.",
+      "ablation": "Baseline (hybrid search with the grader, before routing and the blend): hit@1 78.0%, hit@4 95.1%, MRR 0.850. Adding specialty routing: hit@4 reached 100%, MRR 0.862. Adding the RRF and cosine blend: hit@1 97.6%, MRR 0.988.",
       "metric_definitions": "hit@k is whether the right chunk is anywhere in the top k. MRR is the average of 1 / rank of the first right chunk, so 40 firsts and one second gives (40 + 0.5) / 41 = 0.988.",
       "known_edge_case": "The single hit@1 miss is a yeast-infection question: the broader Vaginitis page ranks first (0.66) and the exact Yeast Infections page second (0.64). It is still in the top 4 that the model sees.",
       "caveats": "The 41 questions are mine, so the numbers describe retrieval on that set. A later quick re-run (11 positive and 3 off-topic questions) kept the same single edge case, and the lowered floor lets some off-topic queries return loosely related sources."

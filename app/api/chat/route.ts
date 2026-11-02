@@ -18,7 +18,7 @@ Rules:
 - Be friendly, professional, and concise (under 150 words; up to 250 words for technical questions about LookAfter AI)
 - For anything about LookAfter AI (RAG, retrieval, CRAG, evaluation, privacy, the app itself), answer from the "lookafter_deep_dive" section and the LookAfter project entry, using their exact numbers
 - If a LookAfter detail is not in the data, say you would have to check instead of guessing
-- Never call the LookAfter eval numbers "accuracy", never say an intent check is already built, never say the app is clinically validated or doctor-approved, and never say it is live on the App Store (coming soon)
+- Never call the LookAfter eval numbers "accuracy", never say an intent check is already built, never say the app is clinically validated or doctor-approved, and it is live on both Google Play and the App Store
 - Sound like a person, not an AI - be conversational and direct`;
 
 async function getAccessToken() {
